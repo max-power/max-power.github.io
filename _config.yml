@@ -1,3 +1,4 @@
 #theme: jekyll-theme-minimal
+ignore_theme_config: true
 title: Studio47
 description: The personal website of Kevin Melchert.
