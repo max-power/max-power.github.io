@@ -6,11 +6,7 @@ url:                 http://max-power.github.io
 layout:              default
 ---
 
-
-<!--img style="height:auto;" alt="" src="https://avatars.githubusercontent.com/u/207775?v=4" width="260" height="260" class="avatar avatar-user width-full border color-bg-default"-->
-
 <h1>Hi!</h1>
-
 
 <div class="intro">
     <div class="avatar">
@@ -18,7 +14,7 @@ layout:              default
     </div>
     <div style="font-size: 22px">
         <p>I am a passionate and detail-oriented software engineer with expertise in the Ruby programming language. Committed to open web principles, excelling in designing and implementing scalable software with a focus on clean, elegant, and maintainable code.</p>
-        <p>Available for hire!</p>
+        <p>Available for hire. <a href="mailto:kevin.melchert@gmail.com">Contact me</a>!</p>
     </div>
 </div>
 
@@ -31,10 +27,11 @@ layout:              default
     }
     .avatar {
         display:block;
-        width: 25rem;
-        height: 25rem;
+        min-width: 30rem;
+        min-height: 30rem;
         border-radius: 2rem; 
-
+        overflow:hidden;
+        box-shadow: 0 0 0 3px rgba(0,0,0,0.2);
     }
     .avatar img {
         width: 100%;

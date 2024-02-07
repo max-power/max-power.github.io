@@ -1,119 +1,96 @@
 :root {
-      --theme-color: #02fea8;
-      --theme-color2: #9198e5;
-      --theme-border-width: 8px;
-      --content-background-color: #fefefe;
-    }
-    ::selection {
-      color: var(--theme-color2);
-      background-color: var(--theme-color);
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      padding: 0;
-      margin: 0;
-      background-color: var(--theme-color);
-      background-image: linear-gradient(var(--theme-color), var(--theme-color2));
-      background-attachment: fixed;
-      overflow:hidden;
-      font-family: system-ui, sans-serif;
-      line-height: 1.4;
-    }
-    .warp {
-      overflow:scroll;
-      background-color: var(--content-background-color);
-      padding: 1rem 1.5rem;
-      padding-left: 20rem;
-      padding-right: 5rem;
+  --theme-color: #02fea8;
+  --theme-color2: #9198e5;
+  --theme-border-width: 8px;
+  --content-background-color: #fefefe;
+}
+::selection {
+  color: var(--theme-color2);
+  background-color: var(--theme-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--theme-color);
+  background-image: linear-gradient(var(--theme-color), var(--theme-color2));
+  background-attachment: fixed;
+  overflow:hidden;
+  font-family: system-ui, sans-serif;
+  line-height: 1.4;
+}
+.warp {
+  overflow:scroll;
+  background-color: var(--content-background-color);
+  padding: 1rem 1.5rem;
+  padding-left: 20rem;
+  padding-right: 5rem;
 
 /*      box-shadow: inset 0px 2px 4px rgba(0,0,0,0.2);*/
-      position: fixed;
-      left:   var(--theme-border-width);
-      right:  var(--theme-border-width);
-      top:    var(--theme-border-width);
-      bottom: var(--theme-border-width);
-      border-radius: 4px 4px;
-    }
-    h1 {
-      color: var(--theme-color);
-      font-size: 15rem;
-      position:fixed;
-      top: 20px;
-      left: 20px;
-      margin: 0;
-      padding: 0;
-      line-height: 0.9;
-      letter-spacing: -0.1em;
-      font-weight: 800;
-    }
-    
+  position: fixed;
+  left:   var(--theme-border-width);
+  right:  var(--theme-border-width);
+  top:    var(--theme-border-width);
+  bottom: var(--theme-border-width);
+  border-radius: 4px 4px;
+}
 
-    .icon {
-      color: #fff;
-      background-color: var(--theme-color);
-      border-radius: 100%;
-      display:inline-block;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 1;
-      padding: 0.1em;
-    }
-    .icon.large {
-      font-size: 36px;
-    }
-    .icon.small {
-      font-size: 14px;
-      font-weight: 600;
-      vertical-align:text-bottom;
-    }
-    .icon.arrow-right::before {
-      content: "→";
-    }
-    
-    
-    .rotated-logo {
-      display: none;
-      
-      color: var(--theme-color);
-      font-size: 6rem;
-      letter-spacing: -1.1rem;
-      margin-top: 0;
-      position:fixed;
-      top: 20px;
-      left: 20px;
-      font-size:3.5rem;
-      letter-spacing: -0.8rem;
+h1 {
+  color: var(--theme-color);
+  font-size: 15rem;
+  position:fixed;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  line-height: 0.9;
+  letter-spacing: -0.1em;
+  font-weight: 800;
+}
+
+
+.icon {
+  color: #fff;
+  background-color: var(--theme-color);
+  border-radius: 100%;
+  display:inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.1em;
+}
+.icon.large {
+  font-size: 36px;
+}
+.icon.small {
+  font-size: 14px;
+  font-weight: 600;
+  vertical-align:text-bottom;
+}
+.icon.arrow-right::before {
+  content: "→";
+}
+
+
+.rotated-logo {
+  display: none;
+  
+  color: var(--theme-color);
+  font-size: 6rem;
+  letter-spacing: -1.1rem;
+  margin-top: 0;
+  position:fixed;
+  top: 20px;
+  left: 20px;
+  font-size:3.5rem;
+  letter-spacing: -0.8rem;
 /*      transform-origin: 0% 100%;
-      transform:rotate(-90deg) translate(-380px, 120px);*/
-    }
-    p {
-      hyphens: auto;
-      text-align: justify;
-    }
-    
-    .borders {display:none;}
+  transform:rotate(-90deg) translate(-380px, 120px);*/
+}
+p {
+  hyphens: auto;
+  text-align: justify;
+}
 
-    .borders .top,
-    .borders .bottom,
-    .borders .left,
-    .borders .right {
-      background-color: var(--theme-color);
-      position: fixed;
-    }
-    .borders .left,
-    .borders .right {
-      top: 0; bottom: 0;
-      width: 1rem;
-    }
-    .borders .left  { left: 0; }
-    .borders .right { right: 0; }
-
-    .borders .top,
-    .borders .bottom {
-      left: 0; right: 0;
-      height: 1rem;
-    }
-    .borders .top { top: 0; }
-    .borders .bottom { bottom: 0; }
