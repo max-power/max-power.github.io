@@ -2,3 +2,6 @@
 theme: minima
 title: Studio47
 description: The personal website of Kevin Melchert.
+
+header_pages:
+#  - about.md
