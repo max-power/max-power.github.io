@@ -1,3 +1,4 @@
-remote_theme: max-power/max-power.github.io
+#remote_theme: max-power/max-power.github.io
+theme: 
 title: Studio47
 description: The personal website of Kevin Melchert.
