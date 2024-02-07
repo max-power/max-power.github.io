@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }}</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#02fea8">
+    <link rel="stylesheet" href="{{ "/assets/css/base.css" | relative_url }}">
+    <script>
+        function changeThemeColor(color) {
+          document.querySelector('meta[name=theme-color]').setAttribute('content', color)
+          document.documentElement.style.setProperty("--theme-color", color);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="warp">
+        <header>
+            <h1>Home!</h1>
+        </header>
+
+        <main>
+            {{ content }}
+        </main>
+    </div>
+
+</body>
+</html>
