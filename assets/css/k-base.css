@@ -18,6 +18,8 @@ pre { white-space: pre-wrap; }
 
 h1,h2,h3,h4,h5,h6,p { widows: 2; }
 
+p { hyphens: auto; }
+
 hr {
     border-style: solid;
     border-width: 1px 0 0;
@@ -43,7 +45,6 @@ caption, figcaption, label, legend { line-height: 1.375; }
 
 /* ************************************************** */
 
-
 :root {
     color-scheme: light dark;
     --color-dark: #1e1e1e;
@@ -51,10 +52,18 @@ caption, figcaption, label, legend { line-height: 1.375; }
     --font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
 html {
-    font-family: var(--font-stack);
+    font-family: "Bricolage Grotesque", var(--font-stack);
 }
+h1 {
+    font-family: Sora, var(--font-stack);
+    font-weight: 999;
+}
+
+svg { 
+    fill: currentcolor;
+}
+
 body {
     min-height: 100vh;
     padding: 4vh 10vw;
@@ -72,6 +81,7 @@ body {
     max-width: 69ch;
 }
 
+
 footer nav ul {
     display: flex;
     gap: 1.5rem;
@@ -85,6 +95,7 @@ a {
     color: currentcolor;
     text-decoration: underline;
     font-weight: 600;
+    font-family: 
 }
 
 a:hover, a:active {
@@ -135,18 +146,16 @@ a:hover, a:active {
     opacity: 1;
 }
 
-svg { fill: var(--color-dark) }
 
 
 @media (prefers-color-scheme: light) {
-
+    :root {
+        --color-light: #fff;
+        --color-dark: #1e1e1e;
+    }
 }
   
 @media (prefers-color-scheme: dark) {
-    svg { 
-        fill: var(--color-light)
-    }
-
     :root {
         --color-light: #1e1e1e;
         --color-dark: #fff;
