@@ -1,7 +1,28 @@
-#remote_theme: max-power/max-power.github.io
-theme: minima
-title: Studio47
+title: HERR<br>MELC<br>HERT
 description: The personal website of Kevin Melchert.
 
-header_pages:
-#  - about.md
+collections:
+  portfolio:
+    output: true
+    permalink: /works/:path/
+
+social_links:
+  LinkedIn: https://linkedin.com/in/kevin-melchert
+  Github: https://github.com/max-power
+  Strava: https://www.strava.com/athletes/2781161
+
+
+# navigation:
+#   - title: About
+#     url: /about
+
+#   - title: Software
+#     url: /software
+  
+#   - title: Photography
+#     url: /photography
+  
+#   - title: Illustration
+#     url: /illustration
+
+

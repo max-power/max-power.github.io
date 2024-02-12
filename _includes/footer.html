@@ -1,0 +1,10 @@
+<footer class="main">
+    <h4 class="social-links-headline">My profile on:</h4>
+    <nav>
+        <ul class="social-links-list">
+            {% for link in site.social_links %}
+            <li><a class="icon icon-{{link[0]}}" href="{{ link[1] }}">{{ link[0] }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</footer>
