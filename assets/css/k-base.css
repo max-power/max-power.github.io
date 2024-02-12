@@ -97,6 +97,7 @@ a:hover, a:active {
     margin-top: 0.75rem;
     display: inline-block;
     position:relative;
+    transition: all 0.2s ease;
 }
 .button:hover,
 .button:active { 
