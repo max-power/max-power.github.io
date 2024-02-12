@@ -5,6 +5,11 @@
     <title>{{ page.title }}</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:type" content="{% if page.collection == 'posts' %}article{% else %}website{% endif %}" />
     <!--meta name="theme-color" content="#02fea8"-->
     <link rel="stylesheet" href="/assets/css/k-base.css">
 </head>

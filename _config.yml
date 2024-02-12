@@ -1,16 +1,15 @@
-title: HERR<br>MELC<br>HERT
-description: The personal website of Kevin Melchert.
-
-collections:
-  portfolio:
-    output: true
-    permalink: /works/:path/
+title: Kevin Melchert
+description: Web developer, Software developer, Data scientist, Cycling enthusiast
 
 social_links:
   LinkedIn: https://linkedin.com/in/kevin-melchert
   Github: https://github.com/max-power
   Strava: https://www.strava.com/athletes/2781161
 
+# collections:
+#   portfolio:
+#     output: true
+#     permalink: /works/:path/
 
 # navigation:
 #   - title: About
