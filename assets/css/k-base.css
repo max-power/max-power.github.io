@@ -68,17 +68,18 @@ body {
     min-height: 100vh;
     padding: 4vh 10vw;
     font-size: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
 #page {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
     gap: 4rem;
+    margin: 0 auto;
     font-weight: 200;
-    max-width: 69ch;
+    max-width: 68ch;
+    min-height: 100vh;
 }
 
 
