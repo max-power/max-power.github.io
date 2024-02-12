@@ -14,6 +14,8 @@ h1 { margin: 0.67em 0; }
 
 pre { white-space: pre-wrap; }
 
+h1,h2,h3,h4,h5,h6,p { widows: 2; }
+
 hr {
     border-style: solid;
     border-width: 1px 0 0;
