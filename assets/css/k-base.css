@@ -54,7 +54,7 @@ caption, figcaption, label, legend { line-height: 1.375; }
 
 ::selection {
     background: #fff17180;
-  }
+}
 
 html {
     font-family: "Bricolage Grotesque", var(--font-stack);
@@ -100,7 +100,6 @@ a {
     color: currentcolor;
     text-decoration: underline;
     font-weight: 600;
-    font-family: 
 }
 
 a:hover, a:active {
@@ -131,7 +130,7 @@ a:hover, a:active {
 }
 
 
-.button::after{
+.button::after {
     content: "";
     display: block;
     width: 100%;
