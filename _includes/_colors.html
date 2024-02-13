@@ -1,0 +1,26 @@
+<div class="colors">
+    <a data-color="blue">blue</a>
+    <a data-color="violet">violet</a>
+    <a data-color="green">green</a>
+    <a data-color="yellow">yellow</a>
+    <a data-color="red">red</a>
+    
+</div>
+<script>
+    var elements = document.querySelectorAll('.colors a[data-color]')
+    document.querySelector('.colors').addEventListener('click', e => {
+        color = document.body.classList.item(0);
+        document.body.classList.replace(color, e.target.dataset.color);
+    })
+</script>
+
+<input type="range" min="0" max="360" step="1" id="hue">
+<script>
+    document.getElementById('hue').addEventListener('input', e => {
+        var hue = e.target.value
+        with(document.documentElement.style) {
+            setProperty("--color-light", "hsl("+hue+", 78%, 70%)");
+            setProperty("--color-dark",  "hsl("+hue+", 26%, 94%)");
+        }
+    })
+</script>
