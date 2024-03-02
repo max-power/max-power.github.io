@@ -89,7 +89,7 @@ body {
     margin: 0 auto;
     font-weight: 200;
     max-width: 68ch;
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 
