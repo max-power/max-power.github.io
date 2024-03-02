@@ -16,9 +16,10 @@ h1 { margin: 0.67em 0; }
 
 pre { white-space: pre-wrap; }
 
-h1,h2,h3,h4,h5,h6,p { text-wrap: pretty; }
+h1,h2,h3,h4,h5,h6 { text-wrap: balance; }
 
-p { hyphens: auto; }
+p { text-wrap: pretty; }
+/* p { hyphens: auto; } */
 
 hr {
     border-style: solid;
@@ -29,7 +30,7 @@ hr {
 }
 
 img, svg, video, canvas, audio, iframe, embed, object {
-    display: block;
+    display: inline-block;
     vertical-align: middle;
     max-width: 100%;
     height: auto;
@@ -69,11 +70,12 @@ svg {
 }
 
 body {
-    min-height: 100vh;
-    padding: 4vh 10vw;
+    min-height: 100dvh;
+    padding: max(4svw, 1rem);
     font-size: 20px;
     color: var(--color-light);
     background-color: var(--color-dark);
+    box-sizing: border-box;
 }
 
 #page {
