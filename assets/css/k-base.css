@@ -132,7 +132,7 @@ a:hover, a:active {
 .button:active { 
     background-color: Canvas;
     color: currentColor;
-    outline: 3px solid vark(--color-light);
+    outline: 3px solid var(--color-light);
 }
 
 
