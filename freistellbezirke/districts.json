@@ -335,10 +335,13 @@
       ]
    },
    {
-      "abbr":"GA",
-      "name":"Gatow",
+      "abbr":"GW",
+      "name":"Grunewald",
       "postal_codes":[
-         "14089"
+         "14193",
+         "14195",
+         "14197",
+         "14199"
       ]
    },
    {
@@ -354,13 +357,10 @@
       ]
    },
    {
-      "abbr":"GW",
-      "name":"Grunewald",
+      "abbr":"GA",
+      "name":"Gatow",
       "postal_codes":[
-         "14193",
-         "14195",
-         "14197",
-         "14199"
+         "14089"
       ]
    },
    {
