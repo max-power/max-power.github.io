@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSMO Freistellbezirke</title>
+	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
+</head>
+<body data-controller="district-map">
+    <!-- Map Container -->
+    <div id="map" data-district-map-target="map"></div>
+
+    <!-- Sidebar with District List -->
+    <div id="sidebar">
+        <h2>COSMO Freistellbezirke</h2>
+        <ul id="district-list" data-district-map-target="districtList"></ul>
+    </div>
+
+    <!-- Stimulus Application and Controller -->
+    <script src="map_controller.js"></script>
+</body>
+</html>
