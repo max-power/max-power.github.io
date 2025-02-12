@@ -4,6 +4,7 @@ application.register("district-map", class extends Stimulus.Controller {
     static targets = ["districtList", "map"];
 
     connect() {
+		this.basePath = window.location.origin + window.location.pathname;
         this.initMap();
         this.districts = [];
         this.allShapes = {};  // Store individual postal code shapes
@@ -21,8 +22,7 @@ application.register("district-map", class extends Stimulus.Controller {
     }
 
     loadDistricts() {
-		const basePath = window.location.origin + window.location.pathname;
-		fetch(`${basePath}/districts.json`)
+		fetch(`${this.basePath}/districts.json`)
             .then(response => response.json())
             .then(data => {
                 this.districts = data;
@@ -64,7 +64,7 @@ application.register("district-map", class extends Stimulus.Controller {
     }
 
     loadGeoJson(postalCode, districtName, shapeLayers) {
-        fetch(`/shapes/${postalCode}.geojson`)
+        fetch(`${this.basePath}shapes/${postalCode}.geojson`)
             .then(response => response.json())
             .then(data => {
                 const geoJsonLayer = L.geoJSON(data, {
