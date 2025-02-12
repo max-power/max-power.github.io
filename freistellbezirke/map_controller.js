@@ -21,7 +21,8 @@ application.register("district-map", class extends Stimulus.Controller {
     }
 
     loadDistricts() {
-        fetch("/districts.json")
+		const basePath = window.location.origin + window.location.pathname;
+		fetch(`${basePath}/districts.json`)
             .then(response => response.json())
             .then(data => {
                 this.districts = data;
