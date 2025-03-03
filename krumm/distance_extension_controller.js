@@ -6,6 +6,11 @@ application.register("krumm", class extends Stimulus.Controller {
   connect() {
     this.parseUrlParams()
     this.updateResults()
+    this.focusField()
+  }
+  
+  focusField() {
+    this.originalDistanceTarget.focus()
   }
   
   parseUrlParams() {
