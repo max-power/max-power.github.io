@@ -37,7 +37,7 @@ body {
   --main-background-color: var(--color-emerald-50);
   --result-text-color: var(--color-emerald-800);
   --result-background-color: var(--color-emerald-100);
-  --result-headline-color: var(--color-emerald-500);
+  --result-headline-color: var(--color-emerald-600);
   background: var(--background-color);
   display: grid;
   min-height: 90vh;
@@ -48,7 +48,7 @@ body.krumm {
   --main-background-color: var(--color-red-50);
   --result-text-color: var(--color-red-800);
   --result-background-color: var(--color-red-100);
-  --result-headline-color: var(--color-red-500);
+  --result-headline-color: var(--color-red-600);
 }
 main {
   place-self: center;
@@ -94,6 +94,9 @@ h1 span {
 details {
   color: var(--result-text-color);
 }
+summary {
+  font-weight: 700;
+}
 dl {
   display: grid;
   gap: 1rem;
@@ -104,7 +107,7 @@ dt, dd {
   margin: 0;
 }
 dd {
-  font-weight: 600;
+  font-weight: 700;
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
