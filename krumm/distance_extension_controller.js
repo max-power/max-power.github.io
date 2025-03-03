@@ -6,14 +6,8 @@ application.register("krumm", class extends Stimulus.Controller {
   connect() {
     this.parseUrlParams()
     this.updateResults()
-    this.focusField()
   }
-  
-  focusField() {
-    this.originalDistanceTarget.focus()
-    this.originalDistanceTarget.dispatchEvent(new Event('touchstart', { bubbles: true }));
-  }
-  
+    
   parseUrlParams() {
     const urlParams = new URLSearchParams(window.location.search);
     
