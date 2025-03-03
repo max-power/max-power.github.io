@@ -91,17 +91,22 @@ h1 span {
   font-weight: 900;
   text-transform: uppercase;
 }
+details {
+  color: var(--result-text-color);
+}
 dl {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
+  margin-top: 1rem;
 }
 dt, dd {
-  color: var(--result-text-color);
   margin: 0;
 }
 dd {
   font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
 }
 .results {
   padding: 1.5rem 2rem;
