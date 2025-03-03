@@ -1,4 +1,4 @@
-dl, dt, dd, input, form, h1 {
+dl, dt, dd, input, form, h1, body {
   margin: 0;
   padding: 0;
 }
@@ -50,6 +50,7 @@ body {
   --result-headline-color: var(--color-emerald-500);
   background: var(--background-color);
   display: grid;
+  min-height: 100vh;
   font-family: ui-rounded;
 }
 body.krumm {
