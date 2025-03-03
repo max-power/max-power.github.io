@@ -11,6 +11,7 @@ application.register("krumm", class extends Stimulus.Controller {
   
   focusField() {
     this.originalDistanceTarget.focus()
+    this.originalDistanceTarget.dispatchEvent(new Event('touchstart', { bubbles: true }));
   }
   
   parseUrlParams() {
