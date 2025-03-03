@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Krumm?</title>
+  <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js"></script>
+  <script src="distance_extension_checker.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-controller="krumm">
+  
+  <main>
+    <form>
+      <h1>Krumm? <span data-krumm-target="result"></span></h1>
+      <label>
+        original Strecke
+        <input 
+          id="original-distance" 
+          type="number" 
+          step="0.1" 
+          min="0"
+          value="1"
+          data-krumm-target="originalDistance" 
+          data-action="input->krumm#inputChanged" 
+          class="form-control">
+        km
+      </label>
+      <label>
+        verlängerte Strecke
+        <input 
+          id="prolonged-distance" 
+          type="number" 
+          step="0.1" 
+          min="0" 
+          data-krumm-target="prolongedDistance" 
+          data-action="input->krumm#inputChanged" 
+          class="form-control">
+        km
+      </label>
+    </form>
+    
+    <div class="results">
+      <dl>
+        <dt>Original Strecke (aufgerundet):</dt>
+        <dd data-krumm-target="originalDistanceOutput"></dd>
+      
+        <dt>Verlängerte Strecke:</dt>
+        <dd data-krumm-target="prolongedDistanceOutput"></dd>
+
+        <dt>Erlaubte Verlängerung:</dt>
+        <dd data-krumm-target="maxDeviation"></dd>
+                
+        <dt>Erlaubte verlängerte Strecke:</dt>
+        <dd data-krumm-target="maxProlongedDistance"></dd>
+
+      
+        <dt>Differenz:</dt>
+        <dd data-krumm-target="difference"></dd>
+      </dl>
+    </div>
+        
+  </main>
+  
+  <script src="distance_extension_controller.js"></script>
+
+</body>
+</html>
