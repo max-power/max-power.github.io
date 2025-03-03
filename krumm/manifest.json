@@ -1,7 +1,7 @@
 {
   "name": "Krumm?",
   "short_name": "Krumm?",
-  "start_url": "/",
+  "start_url": "/krumm",
   "display": "standalone",
   "icons": [
     {
