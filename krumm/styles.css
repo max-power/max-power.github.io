@@ -42,6 +42,8 @@ body {
   display: grid;
   min-height: 90vh;
   font-family: ui-rounded;
+  -webkit-user-select: none;
+  user-select: none;
 }
 body.krumm {
   --background-color: var(--color-red-200);
