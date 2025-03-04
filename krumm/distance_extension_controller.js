@@ -40,7 +40,7 @@ application.register("krumm", class extends Stimulus.Controller {
     this.maxDeviationTarget.textContent            = formatter.format(checker.getMaxExtension())
     this.differenceTarget.textContent              = formatter.format(Math.abs(checker.getDifference())) + " " + (checker.getDifference() > 0 ? "drüber" : "drunter")
     
-    this.resultTarget.textContent = checker.isValid() ? 'Nein!' : 'Ja!'
+    this.resultTarget.textContent = checker.isValid() ? '😎 Nein!' : '😱 Ja!'
     
     document.body.classList.toggle('krumm', !checker.isValid())
   }
