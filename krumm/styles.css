@@ -96,6 +96,9 @@ input {
   font-family: inherit;
   display: inline-block;
 }
+input:focus {
+  outline: 3px solid var(--result-headline-color);
+}
 h1 {
   margin-bottom: 1rem;
 }
