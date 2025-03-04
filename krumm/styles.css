@@ -98,7 +98,6 @@ input {
 }
 h1 {
   margin-bottom: 1rem;
-  font-size:2.5rem;
 }
 h1 span {
   color: var(--result-headline-color);
