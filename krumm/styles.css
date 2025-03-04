@@ -8,6 +8,17 @@ dl, dt, dd, input, form, h1, body {
 }
 
 :root {
+  --color-rose-50: oklch(0.969 0.015 12.422);
+   --color-rose-100: oklch(0.941 0.03 12.58);
+   --color-rose-200: oklch(0.892 0.058 10.001);
+   --color-rose-300: oklch(0.81 0.117 11.638);
+   --color-rose-400: oklch(0.712 0.194 13.428);
+   --color-rose-500: oklch(0.645 0.246 16.439);
+   --color-rose-600: oklch(0.586 0.253 17.585);
+   --color-rose-700: oklch(0.514 0.222 16.935);
+   --color-rose-800: oklch(0.455 0.188 13.697);
+   --color-rose-900: oklch(0.41 0.159 10.272);
+   --color-rose-950: oklch(0.271 0.105 12.094);
   --color-red-50: oklch(0.971 0.013 17.38);
   --color-red-100: oklch(0.936 0.032 17.717);
   --color-red-200: oklch(0.885 0.062 18.334);
@@ -46,11 +57,11 @@ body {
   user-select: none;
 }
 body.krumm {
-  --background-color: var(--color-red-200);
-  --main-background-color: var(--color-red-50);
-  --result-text-color: var(--color-red-800);
-  --result-background-color: var(--color-red-100);
-  --result-headline-color: var(--color-red-600);
+  --background-color: var(--color-rose-200);
+  --main-background-color: var(--color-rose-50);
+  --result-text-color: var(--color-rose-800);
+  --result-background-color: var(--color-rose-100);
+  --result-headline-color: var(--color-rose-600);
 }
 main {
   place-self: center;
