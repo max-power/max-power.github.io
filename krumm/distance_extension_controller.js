@@ -1,7 +1,16 @@
 const application = Stimulus.Application.start();
 
 application.register("krumm", class extends Stimulus.Controller {
-  static targets = ["originalDistance", "prolongedDistance", "result", "originalDistanceOutput", "prolongedDistanceOutput", "maxProlongedDistance", "maxDeviation", "difference"]
+  static targets = [
+    "originalDistance",
+    "prolongedDistance",
+    "result",
+    "originalDistanceOutput",
+    "prolongedDistanceOutput",
+    "maxProlongedDistance",
+    "maxDeviation",
+    "difference"
+  ]
 
   connect() {
     this.parseUrlParams()
