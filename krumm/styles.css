@@ -45,6 +45,9 @@ body {
   -webkit-user-select: none;
   user-select: none;
 }
+
+  
+}
 body.krumm {
   --background-color: var(--color-rose-200);
   --main-background-color: var(--color-rose-50);
@@ -86,6 +89,8 @@ input {
   font-family: inherit;
   display: inline-block;
   padding-right: calc(2ch + 1rem);
+  -webkit-user-select: auto;
+  user-select: auto;
 }
 input:focus {
   outline: 3px solid var(--result-headline-color);
