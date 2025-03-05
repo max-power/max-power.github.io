@@ -19,20 +19,7 @@ application.register("krumm", class extends Stimulus.Controller {
     this.parseUrlParams()
     this.updateResults()
   }
-  
-  get formatter() {
-    if (!this._formatter) {
-      this._formatter = new Intl.NumberFormat('de-DE', {
-        style: 'unit',
-        unit: 'kilometer',
-        unitDisplay: 'short',
-        minimumFractionDigits: 1,
-        maximumFractionDigits: 1
-      });
-    }
-    return this._formatter;
-  }
-    
+
   parseUrlParams() {
     const urlParams = new URLSearchParams(window.location.search);
     
@@ -76,5 +63,18 @@ application.register("krumm", class extends Stimulus.Controller {
     const formattedValue = this.formatValue(Math.abs(difference));
     const label = difference > 0 ? "drüber" : "drunter";
     return `${formattedValue} ${label}`;
+  }
+  
+  get formatter() {
+    if (!this._formatter) {
+      this._formatter = new Intl.NumberFormat('de-DE', {
+        style: 'unit',
+        unit: 'kilometer',
+        unitDisplay: 'short',
+        minimumFractionDigits: 1,
+        maximumFractionDigits: 1
+      });
+    }
+    return this._formatter;
   }
 })
