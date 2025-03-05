@@ -16,7 +16,7 @@ self.addEventListener("install", event => {
       return cache.addAll(FILES_TO_CACHE);
     })
   );
-  console.log("Service Worker Installed & Files Cached");
+  //console.log("Service Worker Installed & Files Cached");
 });
 
 self.addEventListener("fetch", event => {
