@@ -46,8 +46,6 @@ body {
   user-select: none;
 }
 
-  
-}
 body.krumm {
   --background-color: var(--color-rose-200);
   --main-background-color: var(--color-rose-50);
