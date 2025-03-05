@@ -16,31 +16,35 @@
     <form>
       <h1>Krumm? <span data-krumm-target="result"></span></h1>
       <label>
-        Original Strecke
-        <input 
-          id="original-distance" 
-          type="number" 
-          step="0.1" 
-          min="0"
-          value="1"
-          inputmode="decimal"
-          data-krumm-target="originalDistance" 
-          data-action="input->krumm#updateResults" 
-          class="form-control">
-        km
+        Originalstrecke
+        <div class="input-container">
+          <input 
+            id="original-distance" 
+            type="number" 
+            step="0.1" 
+            min="0"
+            value="1"
+            inputmode="decimal"
+            data-krumm-target="originalDistance" 
+            data-action="input->krumm#updateResults" 
+            class="form-control">
+          <span class="unit">km</span>
+        </div>
       </label>
       <label>
         Verlängerte Strecke
-        <input 
-          id="prolonged-distance" 
-          type="number" 
-          step="0.1" 
-          min="0"
-          inputmode="decimal"
-          data-krumm-target="prolongedDistance" 
-          data-action="input->krumm#updateResults" 
-          class="form-control">
-        km
+        <div class="input-container">
+          <input 
+            id="prolonged-distance" 
+            type="number" 
+            step="0.1" 
+            min="0"
+            inputmode="decimal"
+            data-krumm-target="prolongedDistance" 
+            data-action="input->krumm#updateResults" 
+            class="form-control">
+          <span class="unit">km</span>
+        </div>
       </label>
     </form>
     
