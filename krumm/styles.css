@@ -31,7 +31,9 @@ dl, dt, dd, input, form, h1, body {
   --color-emerald-900: oklch(0.378 0.077 168.94);
   --color-emerald-950: oklch(0.262 0.051 172.552);
 }
-
+html, body {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
 body {
   --background-color: var(--color-emerald-200);
   --main-background-color: var(--color-emerald-50);
