@@ -30,8 +30,8 @@ application.register("krumm", class extends Stimulus.Controller {
   }
 
   updateResults() {
-    const originalDistance  = parseFloat(this.originalDistanceTarget.value)  || 0
-    const prolongedDistance = parseFloat(this.prolongedDistanceTarget.value) || 0
+    const originalDistance  = Number(this.originalDistanceTarget.value)  || 0
+    const prolongedDistance = Number(this.prolongedDistanceTarget.value) || 0
 
     const checker   = new DistanceExtensionChecker(originalDistance, prolongedDistance)
     const formatter = new Intl.NumberFormat('de-DE', {
@@ -39,9 +39,8 @@ application.register("krumm", class extends Stimulus.Controller {
       unit: 'kilometer',
       unitDisplay: 'short', // Can be 'short', 'long', or 'narrow'
       minimumFractionDigits: 1,
-      maximumFractionDigits: 2
+      maximumFractionDigits: 1
     });
-    
     
     this.originalDistanceOutputTarget.textContent  = formatter.format(checker.originalDistance)
     this.prolongedDistanceOutputTarget.textContent = formatter.format(checker.prolongedDistance)
