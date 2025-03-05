@@ -2,7 +2,7 @@
   "name": "Krumm?",
   "short_name": "Krumm?",
   "start_url": "/krumm",
-  "display": "standalone",
+  "display": "fullscreen",
   "icons": [
     {
       "purpose": "maskable",
