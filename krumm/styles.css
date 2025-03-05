@@ -110,7 +110,8 @@ h1 span {
 details {
   color: var(--result-text-color);
 }
-summary {
+summary, 
+dd {
   font-weight: 700;
 }
 dl {
@@ -119,11 +120,7 @@ dl {
   grid-template-columns: 1fr auto;
   margin-top: 1rem;
 }
-dt, dd {
-  margin: 0;
-}
 dd {
-  font-weight: 700;
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
