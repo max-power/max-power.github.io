@@ -40,7 +40,8 @@ body {
   --result-headline-color: var(--color-emerald-600);
   background: var(--background-color);
   display: grid;
-  min-height: 90vh;
+  height: 100%;
+  min-height: -webkit-fill-available;
   font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
   -webkit-user-select: none;
   user-select: none;
@@ -89,6 +90,7 @@ input {
   padding-right: calc(2ch + 1rem);
   -webkit-user-select: auto;
   user-select: auto;
+  pointer-events: auto;
 }
 input:focus {
   outline: 3px solid var(--result-headline-color);
