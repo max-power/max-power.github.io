@@ -1,6 +1,7 @@
 class DistanceExtensionChecker {
   constructor(originalDistance, prolongedDistance) {
-    this.originalDistance = Math.ceil(Number(originalDistance));
+//    this.originalDistance = Math.ceil(Number(originalDistance));
+    this.originalDistance = Number(originalDistance);
     this.prolongedDistance = Number(prolongedDistance);
   }
 
@@ -17,7 +18,7 @@ class DistanceExtensionChecker {
   }
 
   getMaxExtension() {
-    if (this.originalDistance <= 5) {
+    if (this.originalDistance < 5.1) {
       return this.getMaxDeviation(1.0, 0.50);
     } else if (this.originalDistance <= 10) {
       return this.getMaxDeviation(2.5, 0.40);
