@@ -1,7 +1,7 @@
 class DistanceExtensionChecker {
   constructor(originalDistance, prolongedDistance) {
 //    this.originalDistance = Math.ceil(Number(originalDistance));
-    this.originalDistance = Number(originalDistance);
+    this.originalDistance  = Number(originalDistance);
     this.prolongedDistance = Number(prolongedDistance);
   }
 
