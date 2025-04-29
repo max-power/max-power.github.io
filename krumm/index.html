@@ -1,76 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
-  <title>Krumm?</title>
-  <script src="stimulus.umd.js"></script>
-  <script src="distance_extension_checker.js"></script>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.json">
+  <title>Nicht verfügbar</title>
 </head>
-<body data-controller="krumm">
+<body>
   
-  <main>
-    <form>
-      <h1>Krumm? <span data-krumm-target="result"></span></h1>
-      <label>
-        Originalstrecke
-        <div class="input-container">
-          <input 
-            id="original-distance" 
-            type="number" 
-            step="0.1" 
-            min="0"
-            value="1"
-            inputmode="decimal"
-            data-krumm-target="originalDistance" 
-            data-action="input->krumm#updateResults" 
-            class="form-control">
-          <span class="unit">km</span>
-        </div>
-      </label>
-      <label>
-        Verlängerte Strecke
-        <div class="input-container">
-          <input 
-            id="prolonged-distance" 
-            type="number" 
-            step="0.1" 
-            min="0"
-            inputmode="decimal"
-            data-krumm-target="prolongedDistance" 
-            data-action="input->krumm#updateResults" 
-            class="form-control">
-          <span class="unit">km</span>
-        </div>
-      </label>
-    </form>
-    
-    <details class="results">
-      <summary data-krumm-target="difference"></summary>
-      <dl>
-        <dt>Original Strecke:</dt>
-        <dd data-krumm-target="originalDistanceOutput"></dd>
-      
-        <dt>Verlängerte Strecke:</dt>
-        <dd data-krumm-target="prolongedDistanceOutput"></dd>
-
-        <dt>Erlaubte Verlängerung:</dt>
-        <dd data-krumm-target="maxDeviation"></dd>
-                
-        <dt>Erlaubte verlängerte Strecke:</dt>
-        <dd data-krumm-target="maxProlongedDistance"></dd>
-      </dl>
-    </details>
-  </main>
+  <h1>Service eingestellt</h1>
   
-  <script src="distance_extension_controller.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
-    }
-  </script>
+  <p>Hi Leute,</p>
+  <p>
+    ich habe den Service hier bisher auf meine Kosten entwickelt und gehostet.
+    <br>Mir wurde vom Vorstand nahegelegt, dass ich beim nächsten Mal, wenn ich etwas für mich entwickle und auf meinen Server stelle, vorher Bescheid geben soll.
+  </p>
+  <p>
+    Daraufhin habe ich diese App zusammen mit einer anderen Bereitschaftsplanungs-App dem Vorstand angeboten. 
+    Mein Preis wurde leider nicht akzeptiert, und damit stelle ich hiermit den Service für alle ein. 
+    Es hat mir bis jetzt nur Ärger und Kosten eingebracht.
+  </p>
+  <p>Vielen Dank für euer Verständnis.</p>
 </body>
 </html>
