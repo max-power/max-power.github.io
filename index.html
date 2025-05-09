@@ -1,24 +1,178 @@
----
-title:               Kevin Melchert
-tagline:             my own website
-description:         Some Amazing Description
-url:                 http://max-power.github.io
-layout:              default
-color:               bw
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<article class="home">
-    <!--
-    <h1>Webmaster and software developer since 1996.</h1>
+  <title>Kevin Melchert // Light & Logic</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: radial-gradient(ellipse at top, #eee9dd, #eee9dd);
+      padding: 0;
+      margin: 0;
+    }
+    .clipped-element {
+      clip-path: path('M0,0 L60,0 L60,60 L120,60 C120,112 112,120 60,120 L120,120 L120,180 C68,180 60,172 60,120 L60,180 L0,180 Z M150,120 A30,30 0 1,1 150,180 A30,30 0 1,1 150,120 Z');
+      filter: grayscale(100%) sepia(20%);
+    }
+    
+    header,
+    footer,
+    article {
+      padding: 3rem;
+    }
+    article {
+    }
+    h3 {
+      font-size: 0.75rem;
+      font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(0,0,0,0.35);
+      margin-block: 2rem;
+    }
+    #photos {
+    }
+    .intro {
+      font-family: Times New Roman, Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+      font-size: clamp(3rem,4vw,6rem);
+      font-weight: 200;
+      line-height: 1.2;
+      text-wrap-style: pretty;
+/*        padding-inline: 34vw 2rem;*/
+    }
+    #code .intro {
+      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+      font-weight: 300;
+    }
+    .gallery {
+      display: flex;
+      padding: 2rem;
+      gap: 2rem;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: 3rem;
+      scroll-behavior: smooth;
+      margin-inline: -3rem;
+      img {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+/*        filter: grayscale(100%) sepia(20%);*/
+        border-radius: 0.25rem;
+      }
+    }
 
-    <p>
-        I possess expertise in web design, software design, database design, prototyping, and back-end development. 
-        My interests lie in clean aesthetics, minimalism, unique typography, photography, and simple UX solutions. 
-        <b>Recently</b>, I completed my studies as a <b>Data Scientist</b>, specializing in data engineering, machine learning, and Generative AI.
-    </p>
-
-    <p>I’d love to learn about your company and see how I can help!</p>
-
-    <p><a href="mailto:blabla@gmail.xyz?subject=Job%20offer&body=Hi%20Kevin,%0D%0A%0D%0A" class="button">GET IN TOUCH</a></p>
-    -->
-</article>
+    .social-links-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0.75rem 0;x
+      
+      a {
+        color: currentcolor;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+      a:hover, a:active {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+      }
+    }
+    
+    
+    .tags {
+      list-style:none;
+      margin:0;
+      padding:0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+      font-size: 0.75rem;
+      color: rgba(0,0,0,0.65);
+      
+      li {
+        text-wrap: nowrap;
+      }
+      li::before {
+        content: "#";
+        color: rgba(0,0,0,0.3);
+      }
+    }
+    
+    a {
+      color: #000;
+      &:hover {
+        background: #000;
+        color: #eee9dd;
+        text-decoration: none;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <!--img src="assets/images/IMG_0326.jpg" width="180" style="visibility:hidden"-->
+      <img src="assets/images/logo.svg" width="180">
+    </div>
+  </header>
+  
+  <main>
+    <article id="photos">
+      <h2 hidden>Photography</h2>
+      <h3>See the Light</h3>
+      <p class="intro">
+        Bold colors meet abstract forms that reimagines architecture &mdash; blurring space and dimension into graphic-inspired art.
+      </p>
+    
+      <div class="gallery">
+        <img class="item" src="assets/images/IMG_3737.jpg" width="400">
+        <img class="item" src="assets/images/IMG_3073.jpg" width="400">
+        <img class="item" src="assets/images/IMG_0326.jpg" width="400">
+        <img class="item" src="assets/images/IMG_0638.jpg" width="400">
+        <img class="item" src="assets/images/IMG_3040.jpg" width="400">
+        <img class="item" src="assets/images/IMG_3719.jpg" width="400">
+        <img class="item" src="assets/images/IMG_8786.jpg" width="400">
+        <img class="item" src="assets/images/IMG_2701.jpg" width="400">
+      </div>
+    </article>
+  
+    <article id="code">
+      <h2 hidden>Programming</h2>
+      <h3>Follow the Logic</h3>
+      <p class="intro">
+        Lines of code weave intention and interaction &mdash; dissolving the boundaries between data and design into living digital experiences.
+      </p>
+      
+      <ul class="tags">
+        <li>Full-Stack Development</li>
+        <li>Ruby on Rails</li>
+        <li>UI/UX</li>
+        <li>Machine Learning</li>
+        <li>Data Science</li>
+      </ul>
+    </article>
+  </main>
+  
+  <footer>
+    <h2 hidden>Elsewhere</h2>
+    <h3>Connect the Dots</h3>
+     <nav>
+       <ul class="social-links-list">
+         <li><a class="icon icon-LinkedIn" href="https://linkedin.com/in/kevin-melchert">LinkedIn</a></li>
+         <li><a class="icon icon-Github" href="https://github.com/max-power">Github</a></li>
+         <li><a class="icon icon-Instagram" href="https://www.instagram.com/k11t.47">Instagram</a></li>
+         <li><a class="icon icon-Strava" href="https://www.strava.com/athletes/2781161">Strava</a></li>
+       </ul>
+     </nav>
+  </footer>
+  
+</body>
+</html>
