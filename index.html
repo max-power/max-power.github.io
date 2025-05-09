@@ -50,12 +50,15 @@
     ::selection {
       background-color: #fff17180;
     }
+    
+    body, figure, ul {
+      padding: 0;
+      margin: 0;
+    }
 
     body {
       font-family: system-ui, sans-serif;
       background: #eee9dd;
-      padding: 0;
-      margin: 0;
     }
     .clipped-element {
       clip-path: path('M0,0 L60,0 L60,60 L120,60 C120,112 112,120 60,120 L120,120 L120,180 C68,180 60,172 60,120 L60,180 L0,180 Z M150,120 A30,30 0 1,1 150,180 A30,30 0 1,1 150,120 Z');
@@ -109,7 +112,6 @@
 
     .social-links-list {
       list-style: none;
-      padding: 0;
       display: flex;
       gap: 1.5rem;
       margin: 0.75rem 0;
@@ -162,7 +164,7 @@
         Bold colors meet abstract forms that reimagines modern architecture &mdash; blurring space and dimension into graphic-inspired art.
       </p>
     
-      <div class="gallery">
+      <figure class="gallery">
         <img class="item" src="assets/images/IMG_3737.jpg" width="400">
         <img class="item" src="assets/images/IMG_3073.jpg" width="400">
         <img class="item" src="assets/images/IMG_0326.jpg" width="400">
@@ -171,7 +173,7 @@
         <img class="item" src="assets/images/IMG_3719.jpg" width="400">
         <img class="item" src="assets/images/IMG_8786.jpg" width="400">
         <img class="item" src="assets/images/IMG_2701.jpg" width="400">
-      </div>
+      </figure>
     </article>
   
     <article id="code">
