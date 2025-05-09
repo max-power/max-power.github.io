@@ -146,15 +146,28 @@
       }
     }
     
+    footer nav {
+      display: grid;
+      gap: 3rem;
+    }
+    
     #fiat-lux {
-      position: fixed;
-      top: 2.5rem;
-      right: 2.5rem;
-      opacity: 0.5;
-      transition: all 120ms ease;
-      &:hover {
+      a {
+        display: inline-block;
         background: none;
-        opacity: 1;
+        mix-blend-mode: multiply;
+        &:hover {
+          background: none;
+          mix-blend-mode: normal;
+        }
+      }
+    }
+    
+    @media (min-width: 600px) {
+      footer nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
     }
     
@@ -208,16 +221,15 @@
   <footer>
     <h2 hidden>Elsewhere</h2>
     <h3>Connect the Dots</h3>
-     <nav>
-       <ul class="social-links-list">
-         <li><a class="icon icon-LinkedIn" href="https://linkedin.com/in/kevin-melchert">LinkedIn</a></li>
-         <li><a class="icon icon-Github" href="https://github.com/max-power">Github</a></li>
-         <li><a class="icon icon-Instagram" href="https://www.instagram.com/k11t.47">Instagram</a></li>
-         <li><a class="icon icon-Strava" href="https://www.strava.com/athletes/2781161">Strava</a></li>
-       </ul>
-     </nav>
-
-     <a id="fiat-lux" href="https://melchert.xyz"><img src="assets/images/melchert-crest.png" width="64" height="64" alt="Fiat Lux"></a>
+    <nav>
+      <ul class="social-links-list">
+        <li><a class="icon icon-LinkedIn" href="https://linkedin.com/in/kevin-melchert">LinkedIn</a></li>
+        <li><a class="icon icon-Github" href="https://github.com/max-power">Github</a></li>
+        <li><a class="icon icon-Instagram" href="https://www.instagram.com/k11t.47">Instagram</a></li>
+        <li><a class="icon icon-Strava" href="https://www.strava.com/athletes/2781161">Strava</a></li>
+      </ul>
+      <div id="fiat-lux"><a href="https://melchert.xyz"><img src="assets/images/melchert-crest.png" width="64" height="64" alt="Fiat Lux"></a></div>
+    </nav>
   </footer>
   
 </body>
