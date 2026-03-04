@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Track anything with NumNum: habits, metrics, routines, forms, widgets, and CSV import/export."
+    />
+    <meta
+      name="keywords"
+      content="habit tracker,widgets,csv,routine,goals,stats,journal,productivity,health,data log"
+    />
+    <meta property="og:title" content="NumNum — Track anything" />
+    <meta
+      property="og:description"
+      content="Track habits, stats, and routines with fast entry logging, widgets, and CSV import/export."
+    />
+    <meta property="og:image" content="monster.webp" />
+    <meta property="og:type" content="website" />
+    <title>NumNum — Track anything</title>
+    <style>
+      :root {
+        --bg: #f8f8f5;
+        --surface: #ffffff;
+        --ink: #1f2430;
+        --muted: #5f6674;
+        --accent: #2f6fdd;
+        --accent-ink: #ffffff;
+        --line: #d9e2f6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+          sans-serif;
+        color: var(--ink);
+        background: radial-gradient(
+          circle at top right,
+          #eaf1ff 0%,
+          var(--bg) 48%
+        );
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      .hero {
+        display: grid;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .pill {
+        display: inline-block;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 13px;
+        color: var(--muted);
+        background: var(--surface);
+      }
+
+      h1 {
+        margin: 12px 0 10px;
+        font-size: clamp(34px, 5vw, 56px);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        background: linear-gradient(
+          120deg,
+          #1f2430 10%,
+          #2f6fdd 55%,
+          #61a8ff 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .lead {
+        font-size: 18px;
+        /* max-width: 62ch; */
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .actions {
+        margin-block: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+      }
+
+      .btn {
+        text-decoration: none;
+        border-radius: 16px;
+        padding: 16px 26px;
+        font-weight: 700;
+        font-size: 18px;
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background: linear-gradient(
+          120deg,
+          #2f6fdd 0%,
+          #4c8df5 45%,
+          #69b2ff 100%
+        );
+        color: var(--accent-ink);
+        box-shadow:
+          0 12px 24px rgba(47, 111, 221, 0.35),
+          0 0 0 1px rgba(255, 255, 255, 0.28) inset,
+          0 0 28px rgba(105, 178, 255, 0.4);
+        transition:
+          transform 140ms ease,
+          box-shadow 140ms ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow:
+          0 16px 30px rgba(47, 111, 221, 0.4),
+          0 0 0 1px rgba(255, 255, 255, 0.32) inset,
+          0 0 34px rgba(105, 178, 255, 0.5);
+      }
+
+      .btn-secondary {
+        background: var(--surface);
+        color: var(--ink);
+        border-color: var(--line);
+      }
+
+      figure {
+        margin: 0;
+        margin-block: 1rem;
+      }
+
+      img {
+        width: 100%;
+        max-width: 35rem;
+        border-radius: 14px;
+        display: block;
+        margin-inline: auto;
+      }
+
+      .grid {
+        margin-top: 26px;
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .feature {
+        background: linear-gradient(
+          160deg,
+          rgba(255, 255, 255, 0.95) 0%,
+          rgba(240, 246, 255, 0.9) 100%
+        );
+        border: 1px solid rgba(47, 111, 221, 0.18);
+        border-radius: 14px;
+        padding: 14px;
+        box-shadow:
+          0 8px 20px rgba(47, 111, 221, 0.08),
+          0 0 0 1px rgba(255, 255, 255, 0.55) inset;
+        backdrop-filter: blur(4px);
+      }
+
+      .feature h3 {
+        margin: 0 0 6px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .feature p {
+        font-size: 14px;
+      }
+
+      .feature-icon {
+        width: 24px;
+        height: 24px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: rgba(47, 111, 221, 0.14);
+        border: 1px solid rgba(47, 111, 221, 0.22);
+        font-size: 13px;
+      }
+
+      footer {
+        margin-top: 24px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <figure>
+          <img src="monster.webp" alt="NumNum mascot" />
+        </figure>
+        <div class="hero-copy">
+          <h1>Track anything, keep it simple.</h1>
+          <p class="lead">
+            NumNum helps you track habits, workouts, work metrics, routines, and
+            goals in one clean app.
+          </p>
+        </div>
+
+        <div class="hero-copy">
+          <div class="actions">
+            <a
+              class="btn btn-primary"
+              href="#"
+              aria-label="App Store link coming soon"
+              >Download on the App Store</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Features">
+        <article class="feature">
+          <h3><span class="feature-icon">🎯</span>Custom Trackables</h3>
+          <p>Create your own metrics with units, decimals, and emoji icons.</p>
+        </article>
+        <article class="feature">
+          <h3><span class="feature-icon">⚡</span>Fast Logging</h3>
+          <p>Add single entries or full form entries in seconds.</p>
+        </article>
+        <article class="feature">
+          <h3><span class="feature-icon">📊</span>Dashboard Widgets</h3>
+          <p>
+            Pin your important numbers with timeframe and aggregation controls.
+          </p>
+        </article>
+        <article class="feature">
+          <h3><span class="feature-icon">☁️</span>CSV + iCloud</h3>
+          <p>Import/export CSV and keep your data synced across devices.</p>
+        </article>
+      </section>
+
+      <footer>
+        <span>© <span id="year"></span> NumNum</span>
+        <span>Built for focused daily tracking.</span>
+      </footer>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
