@@ -175,9 +175,19 @@ class Bruto {
   }
 
   init() {
-    window.addEventListener("pointermove", (e) => this.focus(e));
-    window.addEventListener("click", (e) => this.focus(e));
     this.svg.addEventListener("click", () => this.blink());
+    window.addEventListener("click", (e) => this.focus(e));
+    window.addEventListener("pointermove", (e) => this.focus(e));
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        this.state = "sleeping";
+        this.sleep();
+      } else {
+        // Optional: Stay asleep until the mouse moves,
+        // or wake up automatically when they return:
+        this.wakeUp();
+      }
+    });
     requestAnimationFrame((t) => this.heartbeat(t));
   }
 
