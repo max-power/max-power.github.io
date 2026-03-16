@@ -131,6 +131,13 @@ class Eye {
     this.element.style.translate = `${tx}px ${ty}px`;
   }
 
+  shook(duration = 500) {
+    return this.element.animate(
+      [{ scale: "1 1" }, { scale: "0.7 0.7", offset: 0.1 }, { scale: "1 1" }],
+      { duration, easing: "ease-out" },
+    ).finished;
+  }
+
   _calculatePosition(x, y) {
     const { maxX, maxY, damping, amplify } = this.config;
     const { centerX, centerY } = this.bounds;
@@ -176,6 +183,7 @@ class Bruto {
 
   init() {
     this.svg.addEventListener("click", () => this.blink());
+    this.svg.addEventListener("pointerdown", () => this.handleTripleClick());
     window.addEventListener("click", (e) => this.focus(e));
     window.addEventListener("pointermove", (e) => this.focus(e));
     document.addEventListener("visibilitychange", () => {
@@ -189,6 +197,23 @@ class Bruto {
       }
     });
     requestAnimationFrame((t) => this.heartbeat(t));
+  }
+
+  handleTripleClick() {
+    const now = performance.now();
+
+    // If clicks are more than 500ms apart, reset the count
+    if (now - this.lastClick > 500) {
+      this.clickCount = 0;
+    }
+
+    this.clickCount++;
+    this.lastClick = now;
+
+    if (this.clickCount === 3) {
+      this.wiggle();
+      this.clickCount = 0; // Reset
+    }
   }
 
   // Wake from any state, restore squint, and snap eyes to event position
@@ -309,5 +334,32 @@ class Bruto {
   get randomTarget() {
     const pool = [...this.idleTargets, this.eyes[0].lastPosition];
     return pool[Math.floor(Math.random() * pool.length)];
+  }
+
+  wiggle() {
+    // 1. Shake the whole SVG using WAAPI
+    // We use small translations and a tiny rotation for a "rattle" effect
+    this.svg.animate(
+      [
+        { translate: "0px 0px", rotate: "0deg" },
+        { translate: "-3px 2px", rotate: "-1deg" },
+        { translate: "3px -1px", rotate: "1deg" },
+        { translate: "-3px -2px", rotate: "-0.5deg" },
+        { translate: "2px 2px", rotate: "0.5deg" },
+        { translate: "0px 0px", rotate: "0deg" },
+      ],
+      {
+        duration: 100,
+        iterations: 5, // Repeat the shake 5 times (500ms total)
+        easing: "linear",
+      },
+    );
+
+    // 2. Make the eyes react
+    this.eyes.forEach((e) => e.shook(500));
+
+    // 3. Briefly lock the gaze so they don't track the mouse mid-wiggle
+    // this.isLocked = true;
+    // setTimeout(() => (this.isLocked = false), 500);
   }
 }
