@@ -179,9 +179,9 @@ class Bruto {
       { x: 0, y: 15 }, // U
       { x: 10, y: 15 }, // T
       { x: 20, y: 16 }, // O
-      { x: 0, y: -15 }, // Look up
+      { x: 0, y: -13 }, // Look up
       { x: 0, y: 0 }, // Look straight, twice the chance
-      { x: 25, y: -15 }, // Look at clock (top right)
+      { x: 25, y: -14 }, // Look at clock (top right)
     ];
     this.init();
   }
