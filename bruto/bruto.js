@@ -182,9 +182,8 @@ class Bruto {
   }
 
   init() {
-    this.svg.addEventListener("click", () => this.blink());
-    this.svg.addEventListener("pointerdown", () => this.handleTripleClick());
-    window.addEventListener("click", (e) => this.focus(e));
+    this.svg.addEventListener("pointerdown", () => this.handleClick());
+    window.addEventListener("pointerdown", (e) => this.focus(e));
     window.addEventListener("pointermove", (e) => this.focus(e));
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) {
@@ -199,7 +198,7 @@ class Bruto {
     requestAnimationFrame((t) => this.heartbeat(t));
   }
 
-  handleTripleClick() {
+  handleClick() {
     const now = performance.now();
 
     // If clicks are more than 500ms apart, reset the count
@@ -213,6 +212,8 @@ class Bruto {
     if (this.clickCount === 3) {
       this.wiggle();
       this.clickCount = 0; // Reset
+    } else {
+      this.blink();
     }
   }
 
