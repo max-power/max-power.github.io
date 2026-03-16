@@ -58,7 +58,7 @@ class Eye {
     return anim.finished;
   }
 
-  bop(duration = 4000) {
+  bop(duration = 2000) {
     const anim = this.element.animate(
       { translate: "0 15px" },
       {
