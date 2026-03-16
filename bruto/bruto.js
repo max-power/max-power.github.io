@@ -115,7 +115,12 @@ class Eye {
   moveBy(x, y, duration = 1200) {
     return this.element.animate(
       { translate: `${x}px ${y}px` },
-      { duration, fill: "forwards", easing: "ease-in-out" },
+      {
+        duration,
+        fill: "forwards",
+        easing:
+          "linear(0, 0.03 1.1%, 0.125 2.4%, 0.906 9.8%, 1.046 12.3%, 1.11 15%, 1.116 16.3%, 1.11 17.8%, 1.014 25.8%, 0.987 31.2%, 1.001 47.2%, 1)",
+      },
     ).finished;
   }
 
@@ -300,7 +305,6 @@ class Bruto {
 
     if (this.isStaring && idleTime > 8000) {
       this.state = "idle";
-      this.squint(0.6);
       this.triggerIdleMove(now);
     }
 
@@ -327,6 +331,7 @@ class Bruto {
   triggerIdleMove(now) {
     if (!this.isIdle) return;
     const target = this.randomTarget;
+    this.squint(Math.random() * 0.6 + 0.6);
     this.eyes.forEach((eye) => eye.moveBy(target.x, target.y, 1200));
     this.lastIdleMove = now;
     this.nextIdleMoveInterval = Math.random() * 1500 + 1500;
