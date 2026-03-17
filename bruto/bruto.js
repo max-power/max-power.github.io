@@ -51,7 +51,10 @@ class Eye {
   close(duration = 600) {
     this._cancelSleep();
     const anim = this.element.animate(
-      { scale: "1 0.08", translate: "0 10px" },
+      {
+        scale: "1 0.08",
+        translate: "0 10px",
+      },
       { duration, fill: "forwards", easing: "ease-in-out" },
     );
     this._sleepAnim = anim;
@@ -60,7 +63,7 @@ class Eye {
 
   bop(duration = 2000) {
     const anim = this.element.animate(
-      { translate: "0 15px" },
+      { transform: "translateY(15px)" },
       {
         duration,
         fill: "forwards",
@@ -79,6 +82,7 @@ class Eye {
 
     const anim = this.element.animate(
       { scale: "1 1", translate: "0 0" },
+      //{ scale: "1 1" },
       {
         duration,
         fill: "forwards",
@@ -124,7 +128,7 @@ class Eye {
     ).finished;
   }
 
-  lookAt(x, y, duration = 100) {
+  lookAt(x, y, duration = 300) {
     const { tx, ty } = this._calculatePosition(x, y);
     this.lastPosition = { x: tx, y: ty };
     this.moveBy(tx, ty, duration);
@@ -174,11 +178,11 @@ class Bruto {
     this.nextIdleMoveInterval = 2000;
     this.idleTargets = [
       { x: 0, y: 0 }, // Look straight
-      { x: -20, y: 16 }, // B
-      { x: -10, y: 15 }, // R
-      { x: 0, y: 15 }, // U
-      { x: 10, y: 15 }, // T
-      { x: 20, y: 16 }, // O
+      { x: -20, y: 15 }, // B
+      { x: -10, y: 14 }, // R
+      { x: 0, y: 13 }, // U
+      { x: 10, y: 14 }, // T
+      { x: 20, y: 15 }, // O
       { x: 0, y: -13 }, // Look up
       { x: 0, y: 0 }, // Look straight, twice the chance
       { x: 25, y: -14 }, // Look at clock (top right)
@@ -190,6 +194,9 @@ class Bruto {
     this.svg.addEventListener("pointerdown", () => this.handleClick());
     window.addEventListener("pointerdown", (e) => this.focus(e));
     window.addEventListener("pointermove", (e) => this.focus(e));
+    document.addEventListener("pointerout", () => {
+      if (!this.isSleeping) this.state = "idle";
+    });
     document.addEventListener("visibilitychange", () => {
       if (document.hidden) {
         this.state = "sleeping";
@@ -232,7 +239,6 @@ class Bruto {
     if (this.isSleeping) {
       this.svg.classList.remove("is-sleeping");
       this.eyes.forEach((eye) => eye.wake()); // handles clearAnims + opens eyes
-      //this.squint(1);
     } else if (!this.isActive) {
       // Clear moveBy/squint fills that would block track() writes to style.translate
       this.eyes.forEach((eye) => eye.clearAnims());
@@ -261,11 +267,11 @@ class Bruto {
     this.eyes.map((eye) => eye.squint(factor, duration));
   }
 
-  lookAt(x, y, duration = 100) {
+  lookAt(x, y, duration = 300) {
     this.eyes.forEach((eye) => eye.lookAt(x, y, duration));
   }
 
-  lookAtElement(el, duration = 100) {
+  lookAtElement(el, duration = 300) {
     const bounds = getElementBounds(el);
     this.lookAt(bounds.centerX, bounds.centerY, duration);
   }
