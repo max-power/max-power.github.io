@@ -1,236 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" href="/assets/images/logo.svg?v=1" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/images/logo.png?v=1">
-  <title>Kevin Melchert ☼ Light & Logic</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kevin Melchert",
-    "url": "https://kevin.melchert.xyz",
-    "image": "https://kevin.melchert.xyz/assets/images/logo.png",
-    "sameAs": [
-      "https://github.com/max-power",
-      "https://linkedin.com/in/kevin-melchert",
-      "https://www.instagram.com/k11t.47",
-      "https://www.strava.com/athletes/2781161"
-    ],
-    "jobTitle": "Full-Stack Web Developer, Photographer, Bike Messenger",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Freelance"
-    },
-    "knowsAbout": [
-      "Ruby on Rails",
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "SQL",
-      "MongoDB",
-      "PostgreSQL",
-      "Machine Learning",
-      "Data Science",
-      "Photography",
-      "Full-Stack Development"
-    ],
-    "description": "Full-stack web developer crafting applications in Ruby on Rails, with a creative eye for photography and experience in data science and machine learning.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Berlin",
-      "addressCountry": "Germany"
-    }
-  }
-  </script>
-  <style>
-    ::selection {
-      background-color: #fff17180;
-    }
-    
-    body, figure, ul {
-      padding: 0;
-      margin: 0;
-    }
-
-    body {
-      font-family: system-ui, sans-serif;
-      background: #eee9dd;
-    }
-    .clipped-element {
-      clip-path: path('M0,0 L60,0 L60,60 L120,60 C120,112 112,120 60,120 L120,120 L120,180 C68,180 60,172 60,120 L60,180 L0,180 Z M150,120 A30,30 0 1,1 150,180 A30,30 0 1,1 150,120 Z');
-      filter: grayscale(100%) sepia(20%);
-    }
-    
-    header,
-    footer,
-    article {
-      padding: 2.5rem;
-    }
-    
-    h3 {
-      font-size: 0.75rem;
-      font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: rgba(0,0,0,0.35);
-      margin-block: 2rem;
-    }
-
-    .intro {
-      font-family: system-ui, Times New Roman, Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
-      font-size: clamp(2rem,4vw,6rem);
-      font-weight: 200;
-      line-height: 1.2;
-      text-wrap-style: balance;
-      max-width: 35ch;
-    }
-    #code .intro {
-      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-      font-weight: 300;
-    }
-    
-    .gallery {
-      display: flex;
-      padding: 2rem;
-      gap: 2rem;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      scroll-padding-inline: 3rem;
-      scroll-behavior: smooth;
-      margin-inline: -2.5rem;
-      img {
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-        border-radius: 0.25rem;
-      }
-    }
-
-    .social-links-list {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0.75rem 0;
-    }
-    
-    .tags {
-      list-style:none;
-      margin:0;
-      padding:0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem 1.5rem;
-      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-      font-size: 0.75rem;
-      color: rgba(0,0,0,0.65);
-      
-      li {
-        text-wrap: nowrap;
-      }
-      li::before {
-        content: "#";
-        color: rgba(0,0,0,0.3);
-      }
-    }
-    
-    a {
-      color: currentColor;
-      font-weight: 600;
-      text-decoration-thickness: 2px;      
-      &:hover {
-        background: #fff171;
-      }
-    }
-    
-    footer nav {
-      display: grid;
-      gap: 3rem;
-    }
-    
-    #fiat-lux {
-      a {
-        display: inline-block;
-        background: none;
-        mix-blend-mode: multiply;
-        &:hover {
-          background: none;
-          mix-blend-mode: normal;
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="/assets/images/logo.svg?v=1" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/images/logo.png?v=1" />
+    <title>Kevin Melchert ☼ Light & Logic</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kevin Melchert",
+        "url": "https://kevin.melchert.xyz",
+        "image": "https://kevin.melchert.xyz/assets/images/logo.png",
+        "sameAs": [
+          "https://github.com/max-power",
+          "https://linkedin.com/in/kevin-melchert",
+          "https://www.instagram.com/k11t.47",
+          "https://www.strava.com/athletes/2781161"
+        ],
+        "jobTitle": "Full-Stack Web Developer, Photographer, Bike Messenger",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        },
+        "knowsAbout": [
+          "Ruby on Rails",
+          "JavaScript",
+          "CSS",
+          "HTML",
+          "SQL",
+          "MongoDB",
+          "PostgreSQL",
+          "Machine Learning",
+          "Data Science",
+          "Photography",
+          "Full-Stack Development",
+          "PostGIS"
+        ],
+        "description": "Full-stack web developer crafting applications in Ruby on Rails, with a creative eye for photography and experience in data science and machine learning.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Berlin",
+          "addressCountry": "Germany"
         }
       }
-    }
-    
-    @media (min-width: 600px) {
-      footer nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    </script>
+    <style>
+      ::selection {
+        background-color: #fff17180;
       }
-    }
-    
-  </style>
-</head>
-<body>
-  <header>
-    <div class="brand">
-      <!--img src="assets/images/IMG_0326.jpg" width="180" style="visibility:hidden"-->
-      <img src="assets/images/logo.svg" width="160">
-    </div>
-  </header>
-  
-  <main>
-    <article id="photos">
-      <h2 hidden>Photography</h2>
-      <h3>See the Light</h3>
-      <p class="intro">
-        Bold colors meet abstract forms that reimagines modern architecture &mdash; blurring space and dimension into graphic-inspired art.
-      </p>
-    
-      <figure class="gallery">
-        <img class="item" src="assets/images/IMG_3737.jpg" width="400">
-        <img class="item" src="assets/images/IMG_3073.jpg" width="400">
-        <img class="item" src="assets/images/IMG_0326.jpg" width="400">
-        <img class="item" src="assets/images/IMG_0638.jpg" width="400">
-        <img class="item" src="assets/images/IMG_3040.jpg" width="400">
-        <img class="item" src="assets/images/IMG_3719.jpg" width="400">
-        <img class="item" src="assets/images/IMG_8786.jpg" width="400">
-        <img class="item" src="assets/images/IMG_2701.jpg" width="400">
-      </figure>
-    </article>
-  
-    <article id="code">
-      <h2 hidden>Programming</h2>
-      <h3>Follow the Logic</h3>
-      <p class="intro">
-        Lines of code weave intention and interaction &mdash; dissolving the boundaries between data and design into living digital experiences.
-      </p>
-      
-      <ul class="tags">
-        <li>Full-Stack Development</li>
-        <li>Ruby on Rails</li>
-        <li>UI/UX</li>
-        <li>Machine Learning</li>
-        <li>Data Science</li>
-      </ul>
-    </article>
-  </main>
-  
-  <footer>
-    <h2 hidden>Elsewhere</h2>
-    <h3>Connect the Dots</h3>
-    <nav>
-      <ul class="social-links-list">
-        <li><a class="icon icon-LinkedIn" href="https://linkedin.com/in/kevin-melchert">LinkedIn</a></li>
-        <li><a class="icon icon-Github" href="https://github.com/max-power">Github</a></li>
-        <li><a class="icon icon-Instagram" href="https://www.instagram.com/k11t.47">Instagram</a></li>
-        <li><a class="icon icon-Strava" href="https://www.strava.com/athletes/2781161">Strava</a></li>
-      </ul>
-      <div id="fiat-lux"><a href="https://melchert.xyz"><img src="assets/images/melchert-crest.png" width="64" height="64" alt="Fiat Lux"></a></div>
-    </nav>
-  </footer>
-  
-</body>
+
+      body,
+      figure,
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: system-ui, sans-serif;
+        background: #eee9dd;
+      }
+      .clipped-element {
+        clip-path: path(
+          "M0,0 L60,0 L60,60 L120,60 C120,112 112,120 60,120 L120,120 L120,180 C68,180 60,172 60,120 L60,180 L0,180 Z M150,120 A30,30 0 1,1 150,180 A30,30 0 1,1 150,120 Z"
+        );
+        filter: grayscale(100%) sepia(20%);
+      }
+
+      header,
+      footer,
+      article {
+        padding: 2.5rem;
+      }
+
+      h3 {
+        font-size: 0.75rem;
+        font-family:
+          Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial,
+          sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: rgba(0, 0, 0, 0.35);
+        margin-block: 2rem;
+      }
+
+      .intro {
+        font-family:
+          system-ui,
+          Times New Roman,
+          Didot,
+          "Bodoni MT",
+          "Noto Serif Display",
+          "URW Palladio L",
+          P052,
+          Sylfaen,
+          serif;
+        font-size: clamp(2rem, 4vw, 6rem);
+        font-weight: 200;
+        line-height: 1.2;
+        text-wrap-style: balance;
+        max-width: 35ch;
+      }
+      #code .intro {
+        font-family:
+          ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+          "DejaVu Sans Mono", monospace;
+        font-weight: 300;
+      }
+
+      .gallery {
+        display: flex;
+        padding: 2rem;
+        gap: 2rem;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 3rem;
+        scroll-behavior: smooth;
+        margin-inline: -2.5rem;
+        img {
+          scroll-snap-align: center;
+          scroll-snap-stop: always;
+          border-radius: 0.25rem;
+        }
+      }
+
+      .social-links-list {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+        margin: 0.75rem 0;
+      }
+
+      .tags {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.5rem;
+        font-family:
+          ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+          "DejaVu Sans Mono", monospace;
+        font-size: 0.75rem;
+        color: rgba(0, 0, 0, 0.65);
+
+        li {
+          text-wrap: nowrap;
+        }
+        li::before {
+          content: "#";
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      a {
+        color: currentColor;
+        font-weight: 600;
+        text-decoration-thickness: 2px;
+        &:hover {
+          background: #fff171;
+        }
+      }
+
+      footer nav {
+        display: grid;
+        gap: 3rem;
+      }
+
+      #fiat-lux {
+        a {
+          display: inline-block;
+          background: none;
+          mix-blend-mode: multiply;
+          &:hover {
+            background: none;
+            mix-blend-mode: normal;
+          }
+        }
+      }
+
+      @media (min-width: 600px) {
+        footer nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <!--img src="assets/images/IMG_0326.jpg" width="180" style="visibility:hidden"-->
+        <img src="assets/images/logo.svg" width="160" />
+      </div>
+    </header>
+
+    <main>
+      <article id="code">
+        <h2 hidden>Programming</h2>
+        <h3>Follow the Logic</h3>
+        <p class="intro">
+          Lines of code weave intention and interaction &mdash; dissolving the
+          boundaries between data and design into living digital experiences.
+        </p>
+
+        <ul class="tags">
+          <li>Consulting</li>
+          <li>Full-Stack Development</li>
+          <li>Ruby on Rails</li>
+          <li>UI/UX</li>
+          <li>Machine Learning</li>
+          <li>Data Science</li>
+        </ul>
+      </article>
+
+      <article id="photos">
+        <h2 hidden>Photography</h2>
+        <h3>See the Light</h3>
+
+        <figure class="gallery">
+          <img class="item" src="assets/images/IMG_3737.jpg" width="400" />
+          <img class="item" src="assets/images/IMG_3073.jpg" width="400" />
+          <img class="item" src="assets/images/IMG_0326.jpg" width="400" />
+          <img class="item" src="assets/images/IMG_0638.jpg" width="400" />
+          <img class="item" src="assets/images/IMG_3040.jpg" width="400" />
+          <img class="item" src="assets/images/IMG_3719.jpg" width="400" />
+          <img class="item" src="assets/images/IMG_8786.jpg" width="400" />
+          <img class="item" src="assets/images/IMG_2701.jpg" width="400" />
+        </figure>
+
+        <p class="intro">
+          Bold colors meet abstract forms that reimagines modern architecture
+          &mdash; blurring space and dimension into graphic-inspired art.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <h2 hidden>Elsewhere</h2>
+      <h3>Connect the Dots</h3>
+      <nav>
+        <ul class="social-links-list">
+          <li>
+            <a
+              class="icon icon-LinkedIn"
+              href="https://linkedin.com/in/kevin-melchert"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a class="icon icon-Github" href="https://github.com/max-power"
+              >Github</a
+            >
+          </li>
+          <li>
+            <a
+              class="icon icon-Instagram"
+              href="https://www.instagram.com/k11t.47"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              class="icon icon-Strava"
+              href="https://www.strava.com/athletes/2781161"
+              >Strava</a
+            >
+          </li>
+          <li>
+            <a class="icon" href="https://agentd.link">agentd</a>
+          </li>
+        </ul>
+        <div id="fiat-lux">
+          <a href="https://melchert.xyz"
+            ><img
+              src="assets/images/melchert-crest.png"
+              width="64"
+              height="64"
+              alt="Fiat Lux"
+          /></a>
+        </div>
+      </nav>
+    </footer>
+  </body>
 </html>
